@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beverage Bazaar - Premium Drinks Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ==================== LOGIN PAGE SECTION ==================== -->
+    <div id="login-page" class="auth-page active-page">
+        <div class="auth-container">
+            <div class="auth-header">
+                <div class="logo">
+                    <i class="fas fa-wine-glass-alt"></i>
+                    <h1>Beverage<span>Bazaar</span></h1>
+                </div>
+                <p>Sign in to your premium account</p>
+            </div>
+            
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">Email Address *</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">Password *</label>
+                    <div class="password-input">
+                        <input type="password" id="login-password" required>
+                        <button type="button" class="toggle-password" data-target="login-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#" id="forgot-password">Forgot password?</a>
+                    </div>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                
+                <button type="submit" class="auth-button">Sign In</button>
+                
+                <div class="auth-footer">
+                    <p>Don't have an account? <a href="#" id="show-register" style="color: #d4af37;">Register here</a></p>
+                </div>
+                
+                <div class="demo-credentials">
+                    <p><strong>Demo Account:</strong></p>
+                    <p>Email: demo@beveragebazaar.com.ph</p>
+                    <p>Password: Demo123!</p>
+                </div>
+            </form>
+            
+            <div id="forgot-password-modal" class="modal-overlay">
+                <div class="modal">
+                    <div class="modal-header">
+                        <h3>Reset Password</h3>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Enter your email address and we'll send you instructions to reset your password.</p>
+                        <div class="form-group">
+                            <label for="reset-email">Email Address</label>
+                            <input type="email" id="reset-email">
+                        </div>
+                        <button id="send-reset-link" class="auth-button">Send Reset Link</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== REGISTRATION PAGE SECTION ==================== -->
+    <div id="register-page" class="auth-page">
+        <div class="auth-container">
+            <div class="auth-header">
+                <div class="logo">
+                    <i class="fas fa-wine-glass-alt"></i>
+                    <h1>Beverage<span>Bazaar</span></h1>
+                </div>
+                <p>Create your premium account</p>
+            </div>
+            
+            <form id="registration-form" class="auth-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name *</label>
+                        <input type="text" id="first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name *</label>
+                        <input type="text" id="last-name" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+63 XXX XXX XXXX">
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Delivery Address *</label>
+                    <textarea id="address" rows="3" required placeholder="Street, Barangay, City"></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City *</label>
+                        <input type="text" id="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">ZIP Code *</label>
+                        <input type="text" id="zip" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date-of-birth">Date of Birth *</label>
+                    <input type="date" id="date-of-birth" required>
+                    <small style="color: #a0a0a0; font-size: 0.85rem; display: block; margin-top: 0.5rem;">You must be at least 21 years old to purchase alcoholic beverages</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-password">Create Password *</label>
+                    <div class="password-input">
+                        <input type="password" id="reg-password" required>
+                        <button type="button" class="toggle-password" data-target="reg-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-requirements">
+                        <p>Password Requirements:</p>
+                        <ul>
+                            <li id="req-length">At least 8 characters</li>
+                            <li id="req-uppercase">One uppercase letter</li>
+                            <li id="req-lowercase">One lowercase letter</li>
+                            <li id="req-number">One number</li>
+                            <li id="req-special">One special character</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password *</label>
+                    <div class="password-input">
+                        <input type="password" id="confirm-password" required>
+                        <button type="button" class="toggle-password" data-target="confirm-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div id="password-match" class="validation-message"></div>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> *</label>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="newsletter">
+                    <label for="newsletter">Subscribe to exclusive offers and updates</label>
+                </div>
+                
+                <button type="submit" class="auth-button">Create Account</button>
+                
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="#" id="show-login" style="color: #d4af37;">Sign in here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== STORE PAGE SECTION ==================== -->
+    <div id="store-page">
+        <!-- Header -->
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <i class="fas fa-wine-glass-alt"></i>
+                    <h1>Beverage<span>Bazaar</span></h1>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active" data-nav="home">Home</a></li>
+                        <li><a href="#" data-category="soft-drinks">Soft Drinks</a></li>
+                        <li><a href="#" data-category="juices">Juices</a></li>
+                        <li><a href="#" data-category="energy-drinks">Energy Drinks</a></li>
+                        <li><a href="#" data-category="alcohol">Alcohol</a></li>
+                        <li><a href="#" data-category="hot-beverages">Hot Beverages</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-right">
+                    <div class="user-info">
+                        <span id="user-greeting">Welcome</span>
+                        <button id="logout-btn" class="logout-btn">Logout</button>
+                    </div>
+                    <a href="#" id="show-cart" class="cart-icon-link">
+                        <div class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <div class="container">
+            <!-- Filters Sidebar -->
+            <aside class="filters" id="filters-sidebar">
+                <div class="filter-header" id="filter-toggle">
+                    <h2>Filter Products</h2>
+                    <button class="toggle-filters">
+                        <i class="fas fa-chevron-up"></i>
+                    </button>
+                </div>
+                <div class="filter-content">
+                    <div class="filter-group">
+                        <h3>Price Range (₱)</h3>
+                        <div class="price-range">
+                            <span id="min-price">₱100</span>
+                            <span id="max-price">₱10,000</span>
+                        </div>
+                        <input type="range" min="100" max="10000" value="10000" step="50" class="price-slider" id="price-slider">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Categories</h3>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="soft-drinks" checked> <span>Soft Drinks</span></label>
+                            <label><input type="checkbox" value="juices" checked> <span>Juices</span></label>
+                            <label><input type="checkbox" value="energy-drinks" checked> <span>Energy Drinks</span></label>
+                            <label><input type="checkbox" value="alcohol" checked> <span>Alcohol</span></label>
+                            <label><input type="checkbox" value="hot-beverages" checked> <span>Hot Beverages</span></label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Dietary</h3>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="sugar-free"> <span>Sugar Free</span></label>
+                            <label><input type="checkbox" value="organic"> <span>Organic</span></label>
+                            <label><input type="checkbox" value="low-calorie"> <span>Low Calorie</span></label>
+                            <label><input type="checkbox" value="vegan"> <span>Vegan</span></label>
+                        </div>
+                    </div>
+                    
+                    <button class="apply-filters" id="apply-filters">Apply Filters</button>
+                </div>
+            </aside>
+            
+            <!-- Products Section -->
+            <main class="products-section">
+                <h2>Premium Beverage Collection</h2>
+                <div class="home-indicator" id="home-indicator">Showing all premium products</div>
+                <div class="products-grid" id="products-grid"></div>
+            </main>
+        </div>
+        
+        <!-- Product Detail Modal -->
+        <div class="modal-overlay" id="product-modal-overlay">
+            <div class="product-modal" id="product-modal">
+                <div class="modal-close" id="modal-close">&times;</div>
+                <div class="modal-content">
+                    <div class="modal-image"><img id="modal-img" src="" alt="Product Image"></div>
+                    <div class="modal-info">
+                        <div class="modal-category" id="modal-category"></div>
+                        <h2 class="modal-name" id="modal-name"></h2>
+                        <div class="modal-price" id="modal-price"></div>
+                        <p class="modal-description" id="modal-description"></p>
+                        <div class="modal-details"><h4>Product Details</h4><ul id="modal-details-list"></ul></div>
+                        <div class="modal-quantity">
+                            <label>Quantity:</label>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn" id="decrease-qty">-</button>
+                                <input type="number" class="quantity-input" id="quantity-input" value="1" min="1" max="99">
+                                <button class="quantity-btn" id="increase-qty">+</button>
+                            </div>
+                        </div>
+                        <button class="modal-add-to-cart" id="modal-add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== CART PAGE SECTION ==================== -->
+    <div id="cart-page">
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <a href="#" id="back-to-store" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-wine-glass-alt"></i>
+                        <h1>Beverage<span>Bazaar</span></h1>
+                    </a>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#" id="nav-home">Home</a></li>
+                        <li><a href="#" data-category="soft-drinks">Soft Drinks</a></li>
+                        <li><a href="#" data-category="juices">Juices</a></li>
+                        <li><a href="#" data-category="energy-drinks">Energy Drinks</a></li>
+                        <li><a href="#" data-category="alcohol">Alcohol</a></li>
+                        <li><a href="#" data-category="hot-beverages">Hot Beverages</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-right">
+                    <div class="user-info">
+                        <span id="cart-user-greeting">Welcome</span>
+                        <button id="cart-logout-btn" class="logout-btn">Logout</button>
+                    </div>
+                    <a href="#" id="cart-icon-link" class="cart-icon-link">
+                        <div class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        
+        <div class="container">
+            <main class="cart-page">
+                <div class="cart-header">
+                    <h1><i class="fas fa-shopping-cart"></i> Your Shopping Cart</h1>
+                    <a href="#" id="continue-shopping" class="continue-shopping">
+                        <i class="fas fa-arrow-left"></i> Continue Shopping
+                    </a>
+                </div>
+                
+                <div class="cart-layout">
+                    <div class="cart-items-section">
+                        <div class="cart-table-header">
+                            <div class="header-product">Product</div>
+                            <div class="header-price">Price (₱)</div>
+                            <div class="header-quantity">Quantity</div>
+                            <div class="header-total">Total (₱)</div>
+                            <div class="header-actions">Actions</div>
+                        </div>
+                        <div class="cart-items-container" id="cart-items-container"></div>
+                        <div class="empty-cart-message" id="empty-cart-message">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h2>Your cart is empty</h2>
+                            <p>Begin your premium beverage journey by adding exquisite selections to your cart.</p>
+                            <a href="#" id="empty-cart-shop" class="shop-now-btn">Explore Collection</a>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <h2>Order Summary</h2>
+                        <div class="summary-details">
+                            <div class="summary-row"><span>Subtotal</span><span id="subtotal">₱0</span></div>
+                            <div class="summary-row"><span>Shipping</span><span id="shipping">₱499</span></div>
+                            <div class="summary-row"><span>Tax (12% VAT)</span><span id="tax">₱0</span></div>
+                            <div class="summary-row total"><span>Total</span><span id="total">₱0</span></div>
+                        </div>
+                        <div class="coupon-section">
+                            <input type="text" id="coupon-code" placeholder="Enter coupon code">
+                            <button id="apply-coupon">Apply</button>
+                        </div>
+                        <div class="checkout-actions">
+                            <button id="checkout-btn" class="checkout-btn"><i class="fas fa-lock"></i> Proceed to Checkout</button>
+                            <p class="secure-checkout"><i class="fas fa-shield-alt"></i> Secure checkout</p>
+                        </div>
+                        <div class="payment-methods">
+                            <p>We accept:</p>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-amex"></i><i class="fab fa-cc-paypal"></i>
+                                <i class="fab fa-cc-apple-pay"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cart-suggestions">
+                    <h2>You Might Also Like</h2>
+                    <div class="suggestions-grid" id="suggestions-grid"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Beverage Bazaar</h3>
+                <p>Your premium destination for exquisite beverages. From rare finds to classic favorites, experience luxury in every sip.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#" id="footer-home">Home</a></li>
+                    <li><a href="#" id="footer-cart">View Cart</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Makati City, Philippines</li>
+                    <li><i class="fas fa-phone"></i> (632) 1234-5678</li>
+                    <li><i class="fas fa-envelope"></i> info@beveragebazaar.com.ph</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2023 Beverage Bazaar. All rights reserved. Luxury Redefined.</div>
+    </footer>
+
+    <div class="message" id="message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

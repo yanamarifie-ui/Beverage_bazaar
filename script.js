@@ -41,7 +41,7 @@ const beverages = [
         category: "alcohol",
         price: 4500,
         description: "Limited edition imperial stout aged in bourbon barrels for 12 months.",
-        image: "https://images.unsplash.com/photo-1618885472176-0e6e0a7e6c4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        image: "obsidian.png",
         details: ["750ml wax-sealed bottle", "ABV: 14.5%", "Barrel-aged", "Notes of chocolate & coffee", "Collector's edition"],
         dietary: []
     },
@@ -51,7 +51,7 @@ const beverages = [
         category: "hot-beverages",
         price: 7500,
         description: "Rare coffee beans infused with black truffle essence from Italy.",
-        image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        image: "blacktruffle.png",
         details: ["200g gold tin", "Black truffle infused", "Single origin", "Hand roasted", "Certificate of authenticity"],
         dietary: ["organic", "vegan"]
     },
@@ -61,7 +61,7 @@ const beverages = [
         category: "soft-drinks",
         price: 1750,
         description: "Sparkling lemonade with edible gold flakes and vintage champagne yeast.",
-        image: "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        image: "champagne.png",
         details: ["750ml crystal bottle", "Edible gold flakes", "Champagne yeast", "French lemons", "Handcrafted"],
         dietary: ["vegan"]
     },
@@ -71,7 +71,7 @@ const beverages = [
         category: "juices",
         price: 1500,
         description: "Young Thai coconuts harvested at peak freshness, served in diamond-cut bottles.",
-        image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        image: "diamondcoconut.png",
         details: ["500ml diamond-cut bottle", "First-press coconut water", "No additives", "Electrolyte rich", "Sustainably sourced"],
         dietary: ["organic", "sugar-free", "vegan"]
     },
@@ -81,7 +81,7 @@ const beverages = [
         category: "alcohol",
         price: 3750,
         description: "Crisp lager brewed with gold-filtered water and edible gold leaf.",
-        image: "https://images.unsplash.com/photo-1518176258769-f227c798150e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        image: "lager.png",
         details: ["500ml gold-leaf bottle", "ABV: 5.5%", "Gold-filtered water", "Edible gold leaf", "Limited to 1000 bottles"],
         dietary: []
     },

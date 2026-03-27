@@ -31,7 +31,7 @@ const beverages = [
         category: "energy-drinks",
         price: 925,
         description: "Artisanal energy blend with adaptogens and natural caffeine sources.",
-        image: "midnight-elixir.png",
+        image: "midnight_elixir.png",
         details: ["250ml matte black can", "Natural caffeine", "Adaptogen blend", "Zero sugar", "B-vitamins"],
         dietary: ["sugar-free", "low-calorie"]
     },

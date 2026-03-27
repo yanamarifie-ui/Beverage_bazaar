@@ -11,7 +11,7 @@ const beverages = [
         category: "soft-drinks",
         price: 650,
         description: "Premium craft cola with notes of vanilla and spice, served in black glass bottles.",
-        image: "https://gemini.google.com/share/285f1b439372",
+        image: "onyx.png",
         details: ["750ml black glass bottle", "Cane sugar", "Vanilla extract", "Natural spices", "Limited edition"],
         dietary: []
     },
@@ -21,7 +21,7 @@ const beverages = [
         category: "juices",
         price: 1250,
         description: "Hand-squeezed blood orange juice from premium Italian orchards.",
-        image: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        image: "gold_reserve.png",
         details: ["500ml gold-foiled bottle", "100% blood orange", "Cold pressed", "No additives", "Single origin"],
         dietary: ["organic", "vegan"]
     },
@@ -31,7 +31,7 @@ const beverages = [
         category: "energy-drinks",
         price: 925,
         description: "Artisanal energy blend with adaptogens and natural caffeine sources.",
-        image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        image: "midnight-elixir.png",
         details: ["250ml matte black can", "Natural caffeine", "Adaptogen blend", "Zero sugar", "B-vitamins"],
         dietary: ["sugar-free", "low-calorie"]
     },
